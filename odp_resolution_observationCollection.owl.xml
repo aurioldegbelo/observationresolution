@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY swrl "http://www.w3.org/2003/11/swrl#" >
+    <!ENTITY swrlb "http://www.w3.org/2003/11/swrlb#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY observationresolution "http://www.semanticweb.org/degbelo/ontologies/observationresolution#" >
+    <!ENTITY observationcollectionresolution "http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#" >
+]>
+<rdf:RDF xmlns="http://www.semanticweb.org/degbelo/ontologies/2013/2/untitled-ontology-30#" xml:base="http://www.semanticweb.org/degbelo/ontologies/2013/2/untitled-ontology-30" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:swrl="http://www.w3.org/2003/11/swrl#" xmlns:observationresolution="http://www.semanticweb.org/degbelo/ontologies/observationresolution#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:swrlb="http://www.w3.org/2003/11/swrlb#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:observationcollectionresolution="http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ontology design pattern for the characterization of the spatial and temporal resolution of an observation collection, based on the observed study area and the observed study period of the observation collection. </rdfs:comment>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Version 1.0 (created by Auriol Degbelo&lt;degbelo@uni-muenster.de&gt;)</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#hasMember -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#hasMember">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">relation which links an observation collection to an observation which is member of the collection</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#Observation"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#ObservationCollection"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#DUL:hasQuality -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#DUL:hasQuality">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">see the definition at http://ontologydesignpatterns.org/ont/dul/DUL.owl</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#hasObservedArea -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#hasObservedArea">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">relation which links an observation to its observed area</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#DUL:hasQuality"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#Observation"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#hasObservedStudyArea"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#hasObservedPeriod -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#hasObservedPeriod">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">relation which links an observation to its observed period</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#DUL:hasQuality"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#Observation"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#hasObservedStudyPeriod"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#hasObservedStudyArea -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#hasObservedStudyArea">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">relation which links an observation collection to its observed study area</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#DUL:hasQuality"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#ObservationCollection"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#hasObservedStudyPeriod -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#hasObservedStudyPeriod">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">relation which links an observation collection to its observed study period</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#DUL:hasQuality"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#ObservationCollection"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#hasSpatialResolution -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#hasSpatialResolution">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">relation which links an observation collection to its spatial resolution</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#DUL:hasQuality"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#ObservationCollection"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#hasTemporalResolution -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#hasTemporalResolution">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">relation which links an observation collection to its temporal resolution</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#DUL:hasQuality"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#ObservationCollection"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#DUL:Quality -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#DUL:Quality">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">see the definition at http://ontologydesignpatterns.org/ont/dul/DUL.owl</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#DUL:Situation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#DUL:Situation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#DUL:SocialObject"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">see the definition at http://ontologydesignpatterns.org/ont/dul/DUL.owl</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#DUL:SocialObject -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#DUL:SocialObject">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">see the definition at http://ontologydesignpatterns.org/ont/dul/DUL.owl</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#Observation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#Observation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#DUL:Situation"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#ObservationCollection"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">outcome of an observation process</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#ObservationCollection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#ObservationCollection">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#DUL:Situation"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collection of observations</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#ObservedArea -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#ObservedArea">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#DUL:Quality"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">spatial region of the phenomenon of interest that has been observed (the term applies to a single observation)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#ObservedPeriod -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#ObservedPeriod">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#DUL:Quality"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">temporal region of the phenomenon of interest that has been observed (the term applies to a single observation)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#ObservedStudyArea -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#ObservedStudyArea">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#DUL:Quality"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">portion of the study area that has been observed (the term applies to an observation collection). The study area is the spatial extent of the analysis</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#ObservedStudyPeriod -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#ObservedStudyPeriod">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#DUL:Quality"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">portion of the study period that has been observed (the term applies to an observation collection). The study period is the temporal extent of the analysis</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#SpatialResolution -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#SpatialResolution">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#DUL:Quality"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">amount of spatial detail in an observation collection</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#TemporalResolution -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#TemporalResolution">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#DUL:Quality"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">amount of temporal detail in an observation collection</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="urn:swrl#observationcollection">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#obsstudyperiod">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#obsstudysarea">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#hasSpatialResolution"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#observationcollection"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#obsstudysarea"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#ObservationCollection"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#observationcollection"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#hasObservedStudyArea"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#observationcollection"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#obsstudysarea"/>
+                            </rdf:Description>
+                        </rdf:first>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#hasObservedStudyPeriod"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#observationcollection"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#obsstudyperiod"/>
+                            </rdf:Description>
+                        </rdf:first>
+                    </rdf:Description>
+                </rdf:rest>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#ObservationCollection"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#observationcollection"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/degbelo/ontologies/observationcollectionresolution#hasTemporalResolution"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#observationcollection"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#obsstudyperiod"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+<!-- Generated by the OWL API (version 3.3.1957) http://owlapi.sourceforge.net -->
