@@ -4,6 +4,8 @@ This repository contains an observation-based theory of spatial and temporal res
 
 
 
-[![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.59535.svg)](http://dx.doi.org/10.5281/zenodo.59535)
+[![DOI](https://zenodo.org/badge/64927403.svg)](https://zenodo.org/badge/latestdoi/64927403)
+
+
 
 
