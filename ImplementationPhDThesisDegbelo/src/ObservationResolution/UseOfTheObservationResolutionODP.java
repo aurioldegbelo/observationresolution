@@ -26,7 +26,7 @@ public class UseOfTheObservationResolutionODP {
 	/*
 	 * Example of use of the ODP useful to characterize the spatial and temporal resolution of a single sensor observation
 	 * Three libraries are required to execute this program: the Jena library, the OWL API library, and the Pellet Reasoner library
-	 * Libraries (i.e. the .jar files) are found in the folder '/chapter7/Java Libraries'
+	 * Libraries (i.e. the .jar files) are found in the folder 'Java Libraries'
 	 * 
 	 */
 	

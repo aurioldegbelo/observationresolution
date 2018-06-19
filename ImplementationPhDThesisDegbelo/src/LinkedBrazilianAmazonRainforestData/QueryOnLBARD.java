@@ -15,7 +15,7 @@ public class QueryOnLBARD {
 	/*
 	 * Example of query on the Linked Brazilian Amazon dataset 
 	 * The Jena library library is required to execute this program
-	 * Libraries (i.e. the .jar files) are found in the folder '/chapter7/Java Libraries'
+	 * Libraries (i.e. the .jar files) are found in the folder 'Java Libraries'
 	 */
 	
 	public static void main(String[] args) {
