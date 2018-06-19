@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog id="XML Catalog File (see http://www.oasis-open.org/committees/entity/spec-2001-08-06.html) - Created By Protege 4" prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <group id="Folder Repository, directory=C:\Users\degbelo\Downloads\pellet-2.3.0\pellet-2.3.0\examples\data, Auto-Update=true" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1336391271901" name="http://www.example.org/ontology3e84710c:1139cb9e449:-8000" uri="wine.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1336391271901" name="http://www.lehigh.edu/~zhp2/2004/0401/univ-bench.owl" uri="univ-bench.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1336391271901" name="http://www.co-ode.org/ontologies/galen" uri="simple-galen.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1336391271901" name="http://cohse.semanticweb.org/ontologies/people" uri="people+pets.owl"/>
+    </group>
+</catalog>
