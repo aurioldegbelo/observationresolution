@@ -6,9 +6,7 @@ The repository also contains a JavaCode which provides some examples of use of b
 
 For questions, please do not hesitate to contact [me](https://sites.google.com/site/aurioldegbelo/).
 
-
-[![DOI](https://zenodo.org/badge/64927403.svg)](https://zenodo.org/badge/latestdoi/64927403)
-
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1292791.svg)](https://doi.org/10.5281/zenodo.1292791)
 
 
 
