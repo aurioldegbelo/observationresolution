@@ -16,6 +16,7 @@
      temporal receptive window or the temporal location of the observer. The examples presented in this specification take 'observed period' of an 
 	 observation as the temporal location of the observer
 	 Last modified: August 16, 2013
+	 Author: Auriol Degbelo
 -}
 
 module ObservationCollectionResolution where
